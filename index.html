@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Smart Digital Clock</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <img src=alt="logo" class="logo" />
+  <div class="toggle-container">
+    <label class="switch">
+      <input type="checkbox" id="modeToggle">
+      <span class="slider"></span>
+    </label>
+  </div>
+
+  <div class="clock-container">
+    <h1 id="clock">00:00:00</h1>
+    <div class="ampm" id="ampm">AM</div>
+    <p id="date">Date: </p>
+    <p id="temperature"><span class="weather-icon">🌡️</span>Loading...</p>
+    <p id="battery">🔋 Battery: Detecting...</p>
+    <p id="network">🌐 Network: Checking...</p>
+
+    <div class="city-input">
+      <input type="text" id="cityName" placeholder="Enter city name" />
+      <button id="setCity">Set City</button>
+    </div>
+
+    <div class="alarm-section">
+      <label for="alarmTime">⏰ Set Alarm:</label>
+      <input type="time" id="alarmTime" />
+      <button id="setAlarmBtn">Set Alarm</button>
+      <p id="alarmStatus">Alarm: Not set</p>
+    </div>
+  </div>
+
+  <audio id="alarmSound" src="https://www.soundjay.com/misc/music-box-1.mp3" 
+  preload="auto"></audio>
+  <script src="script.js"></script>
+
+
+
+  <h3><p style ="font-family: centaur;"><i>Copyright &#169; <b> HASAN DHRUBO ; The NovaCore Group </b> And DIC Team Nexus - 2026. All rights reserved.</i></p></h3>
+</body>
+</html>

@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+
+body 
+{
+  margin: 0;
+  height: 100vh;
+  background: var(--bg-color);
+  color: var(--text-color);
+  font-family: 'Orbitron', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background 0.5s, color 0.5s;
+  flex-direction: column;
+}
+
+img
+
+{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+
+}
+
+:root
+
+{
+  --bg-color: #50b39abd;
+  --text-color: #ffffff;
+  --container-bg: rgba(255, 255, 255, 0.05);
+}
+
+body.light
+
+{
+  --bg-color: #ffffff;
+  --text-color: #111;
+  --container-bg: rgba(0, 0, 0, 0.05);
+}
+
+.clock-container 
+
+{
+  background: var(--container-bg);
+  padding: 45px 60px;
+  border-radius: 25px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+#clock 
+
+{
+  font-size: 60px;
+  color: #000000;
+  text-shadow: 0 0 10px #ffffff;
+}
+
+.ampm 
+
+{
+  margin-top: 5px;
+  font-size: 16.5px;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 6px;
+  background: #ffffff20;
+  color: #000000;
+}
+
+#temperature, #date, #battery, #network 
+
+{
+  margin: 10px 0;
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.toggle-container 
+
+{
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.switch 
+
+{
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.switch input { display: none; }
+.slider 
+
+{
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #ccc;
+  border-radius: 34px;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.slider:before 
+
+{
+  content: "";
+  position: absolute;
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 55%;
+  transition: 0.4s;
+
+}
+
+input:checked + .slider 
+
+{
+  background-color: #39645b;
+}
+
+input:checked + .slider:before 
+
+{
+  transform: translateX(25px);
+}
+
+.city-input, .alarm-section 
+
+{
+  margin-top: 20px;
+}
+
+.city-input input, .alarm-section input 
+{
+
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  margin-right: 10px;
+
+}
+.city-input button, .alarm-section button 
+
+{
+  padding: 6px 12px;
+  border: none;
+  background-color: #ffffff;
+  color: black;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+
+}
+.city-input button:hover, .alarm-section button:hover 
+
+{
+  background-color: #ffffff;
+  
+}
